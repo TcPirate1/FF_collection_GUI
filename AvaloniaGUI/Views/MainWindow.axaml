@@ -3,9 +3,11 @@
         xmlns:vm="using:AvaloniaGUI.ViewModels"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        mc:Ignorable="d" d:DesignWidth="500" d:DesignHeight="250"
         x:Class="AvaloniaGUI.Views.MainWindow"
         x:DataType="vm:MainWindowViewModel"
+		Width="500"
+		Height="250"
         Icon="/Assets/avalonia-logo.ico"
         Title="Final Fantasy Card Collection">
 
@@ -15,6 +17,21 @@
         <vm:MainWindowViewModel/>
     </Design.DataContext>
 
-    <TextBlock Text="{Binding Greeting}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+		<StackPanel Orientation="Vertical" HorizontalAlignment="Center">
+			<TextBlock Text="Welcome to FF Collections!" FontSize="20" FontWeight="Bold" Margin="10"/>
+			<StackPanel Orientation="Horizontal">
+				
+				<StackPanel Orientation="Vertical" Margin="0,0,50,0">
+					<Button Margin="30,30,0,30" Padding="29,5" FontSize="30">Add</Button>
+					<Button Margin="30,0,0,0" FontSize="30">Search</Button>
+				</StackPanel>
+				
+					<StackPanel Orientation="Vertical">
+						<Button Margin="30,30,0,30" Padding="26,5" FontSize="30">Edit</Button>
+						<Button Margin="30,0,0,0" FontSize="30">Delete</Button>
+				</StackPanel>
+				
+			</StackPanel>
+		</StackPanel>
 
 </Window>
