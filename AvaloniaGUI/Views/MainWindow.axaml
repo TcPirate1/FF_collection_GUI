@@ -18,7 +18,7 @@
     </Design.DataContext>
 
 		<StackPanel Orientation="Vertical" HorizontalAlignment="Center">
-			<TextBlock Text="Welcome to FF Collections!" FontSize="20" FontWeight="Bold" Margin="10"/>
+			<TextBlock Text="Welcome to FF Collections!" FontSize="20" FontWeight="Bold" Margin="50,10"/>
 			<StackPanel Orientation="Horizontal">
 				
 				<StackPanel Orientation="Vertical" Margin="0,0,50,0">
