@@ -4,7 +4,7 @@ using Avalonia.Markup.Xaml;
 
 namespace AvaloniaGUI;
 
-public partial class EditPage : UserControl
+public partial class EditPage : Window
 {
     public EditPage()
     {

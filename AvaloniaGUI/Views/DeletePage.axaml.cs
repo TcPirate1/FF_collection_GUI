@@ -4,9 +4,9 @@ using Avalonia.Markup.Xaml;
 
 namespace AvaloniaGUI;
 
-public partial class SearchPage : Window
+public partial class DeletePage : Window
 {
-    public SearchPage()
+    public DeletePage()
     {
         InitializeComponent();
     }

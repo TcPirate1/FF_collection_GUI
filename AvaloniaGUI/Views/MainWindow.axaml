@@ -9,7 +9,8 @@
 		Width="500"
 		Height="250"
         Icon="/Assets/ff.png"
-        Title="Final Fantasy Card Collection">
+        Title="Final Fantasy Card Collection"
+		WindowStartupLocation="CenterOwner">
 
     <Design.DataContext>
         <!-- This only sets the DataContext for the previewer in an IDE,
@@ -22,13 +23,13 @@
 			<StackPanel Orientation="Horizontal">
 				
 				<StackPanel Orientation="Vertical" Margin="0,0,50,0">
-					<Button Margin="30,30,0,30" Padding="29,5" FontSize="30">Add</Button>
-					<Button Margin="30,0,0,0" FontSize="30">Search</Button>
+					<Button Margin="30,30,0,30" Padding="29,5" FontSize="30" Command="{Binding OpenAddPage}">Add</Button>
+					<Button Margin="30,0,0,0" FontSize="30" Command="{Binding OpenSearchPage}">Search</Button>
 				</StackPanel>
 				
 					<StackPanel Orientation="Vertical">
-						<Button Margin="30,30,0,30" Padding="26,5" FontSize="30">Edit</Button>
-						<Button Margin="30,0,0,0" FontSize="30">Delete</Button>
+						<Button Margin="30,30,0,30" Padding="26,5" FontSize="30" Command="{Binding OpenEditPage}">Edit</Button>
+						<Button Margin="30,0,0,0" FontSize="30" Command="{Binding OpenDeletePage}">Delete</Button>
 				</StackPanel>
 				
 			</StackPanel>
