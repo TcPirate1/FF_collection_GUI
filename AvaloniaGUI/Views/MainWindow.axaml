@@ -8,7 +8,7 @@
         x:DataType="vm:MainWindowViewModel"
 		Width="500"
 		Height="250"
-        Icon="/Assets/avalonia-logo.ico"
+        Icon="/Assets/ff.png"
         Title="Final Fantasy Card Collection">
 
     <Design.DataContext>
