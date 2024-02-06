@@ -2,11 +2,12 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        mc:Ignorable="d" d:DesignWidth="500" d:DesignHeight="450"
         x:Class="AvaloniaGUI.AddPage"
         Title="AddPage"
 		Width="500"
 		Height="450">
+
   <StackPanel Orientation="Vertical" HorizontalAlignment="Center">
 		<TextBlock Text="Add FF card" FontSize="20" FontWeight="Bold" Margin="50,10" HorizontalAlignment="Center"/>
 			<!--Figure out how to hide or show success/error message later-->
