@@ -14,7 +14,7 @@ If using `VSCode`, the extension requires [.NET 8.0 core](https://marketplace.vi
 
 ## TODO
 
-- Connect to MongoDB.
+- Connect to MongoDB (Installed required nuget packages).
 - Read, Add, Edit, Delete (in this order).
 
 ## Pages
