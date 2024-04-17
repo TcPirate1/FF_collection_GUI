@@ -14,9 +14,10 @@ If using `VSCode`, the extension requires [.NET 8.0 core](https://marketplace.vi
 
 ## TODO
 
-- Changing file path does not stop the extension trying to download dotnet. Find out how to prevent this.
-- Connect to MongoDB (Installed required nuget packages).
-- Read, Add, Edit, Delete (in this order).
+[] Changing file path does not stop the extension trying to download dotnet. Find out how to prevent this.
+[] Cancel button functionality.
+[] Connect to MongoDB (Installed required nuget packages).
+[] Read, Add, Edit, Delete (in this order).
 
 ## Pages
 
