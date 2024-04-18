@@ -14,9 +14,14 @@ If using `VSCode`, the extension requires [.NET 8.0 core](https://marketplace.vi
 
 ## TODO
 
-[] Changing file path does not stop the extension trying to download dotnet. Find out how to prevent this.
+[x] Fixed download error by running the install script myself so that it wouldn't face permission errors. This doesn't fix that the settings does not use the specified path.
+
+[] C# dev kit does not detect the installed .NET sdk on Manjaro machine. Trying to find solution to this.
+
 [] Cancel button functionality.
+
 [] Connect to MongoDB (Installed required nuget packages).
+
 [] Read, Add, Edit, Delete (in this order).
 
 ## Pages
