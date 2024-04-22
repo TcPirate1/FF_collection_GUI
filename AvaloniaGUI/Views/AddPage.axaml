@@ -2,8 +2,10 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+		xmlns:vm="using:AvaloniaGUI.ViewModels"
         mc:Ignorable="d" d:DesignWidth="500" d:DesignHeight="450"
         x:Class="AvaloniaGUI.AddPage"
+		x:DataType="vm:AddPageViewModel"
         Title="AddPage"
 		Width="500"
 		Height="450">
@@ -35,7 +37,7 @@
 	  </Border>
 			<StackPanel Orientation="Horizontal">
 				<Button Margin="30,30,0,30" Padding="29,5" FontSize="30">Add</Button>
-				<Button Margin="30,30,0,30" Padding="29,5" FontSize="30">Cancel</Button>
+				<Button x:Name="AddPageClearTextBoxes" Click="AddPageClearTextBoxes_Click" Margin="30,30,0,30" Padding="29,5" FontSize="30">Clear All</Button>
 			</StackPanel>
 	</StackPanel>
 </Window>
