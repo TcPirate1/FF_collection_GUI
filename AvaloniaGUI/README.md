@@ -18,9 +18,9 @@ If using `VSCode`, the extension requires [.NET 8.0 core](https://marketplace.vi
 
 [] C# dev kit does not detect the installed .NET sdk on Manjaro machine. Trying to find solution to this.
 
-[] Cancel button functionality.
+[] Cancel button functionality. Instead of closing the page, it will just clear text fields.
 
-[] Connect to MongoDB (Installed required nuget packages).
+[] Connect to MongoDB (Need to convert to a web service at a later date).
 
 [] Read, Add, Edit, Delete (in this order).
 
