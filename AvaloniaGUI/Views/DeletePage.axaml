@@ -37,7 +37,7 @@
 	  </Border>
 			<StackPanel Orientation="Horizontal">
 				<Button Margin="30,30,0,30" Padding="29,5" FontSize="30">Delete</Button>
-				<Button Margin="30,30,0,30" Padding="29,5" FontSize="30">Cancel</Button>
+				<Button x:Name="DeletePageClearTextBoxes" Click="DeletePageClearTextBoxes_Click" Margin="30,30,0,30" Padding="29,5" FontSize="30">Clear All</Button>
 			</StackPanel>
 	</StackPanel>
 </Window>
