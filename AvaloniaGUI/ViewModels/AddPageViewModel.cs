@@ -10,11 +10,7 @@ using ReactiveUI;
 
 namespace AvaloniaGUI.ViewModels
 {
-    public class AddPageViewModel: ViewModelBase
+    public class AddPageViewModel
     {
-        protected override void CloseCurrentPage()
-        {
-            (Application.Current.ApplicationLifetime as IClassicDesktopStyleApplicationLifetime)?.MainWindow.Close();
-        }
     }
 }

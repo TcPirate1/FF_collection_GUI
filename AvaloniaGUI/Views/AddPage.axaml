@@ -37,7 +37,7 @@
 	  </Border>
 			<StackPanel Orientation="Horizontal">
 				<Button Margin="30,30,0,30" Padding="29,5" FontSize="30">Add</Button>
-				<Button Margin="30,30,0,30" Padding="29,5" FontSize="30" Command="{Binding CancelCommand}">Cancel</Button>
+				<Button Margin="30,30,0,30" Padding="29,5" FontSize="30">Cancel</Button>
 			</StackPanel>
 	</StackPanel>
 </Window>
