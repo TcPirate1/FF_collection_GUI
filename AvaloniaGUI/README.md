@@ -16,7 +16,7 @@ If using `VSCode`, the extension requires [.NET 8.0 core](https://marketplace.vi
 
 [x] Fixed download error by running the install script myself so that it wouldn't face permission errors. This doesn't fix that the settings does not use the specified path.
 
-[x] C# dev kit does not detect the installed .NET sdk on Manjaro machine. Still don't know what caused this but after re-booting, it appears to be fixed.
+[x] C# dev kit does not detect the installed .NET sdk on Manjaro machine. Update: If it is opened through file context menu the error will occur but if opened through Terminal Emulator then it will not.
 
 [x] Cancel button functionality. Instead of closing the page, it will just clear text fields.
 
