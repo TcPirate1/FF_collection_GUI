@@ -1,3 +1,4 @@
+using System.Collections;
 using MongoDB.Driver;
 
 namespace AvaloniaGUI
@@ -12,6 +13,33 @@ namespace AvaloniaGUI
             Database = client.GetDatabase(databaseName);
         }
 
-        // Add additional methods or properties as needed for accessing MongoDB collections
+        public IMongoCollection<T> GetCollection<T>(string name)
+        {
+            return Database.GetCollection<T>(name);
+        }
+
+        public void InsertOneDoc<T>(string collectionName, T document)
+        {
+            var collection = GetCollection<T>(collectionName);
+            collection.InsertOne(document);
+        }
+
+        public IEnumerable FindOne<T>(string collectionName, FilterDefinition<T> filter)
+        {
+            var collection = Database.GetCollection<T>(collectionName);
+            return collection.Find(filter).ToList();
+        }
+
+        public void UpdateOne<T>(string collectionName, FilterDefinition<T> filter, UpdateDefinition<T> update)
+        {
+            var collection = Database.GetCollection<T>(collectionName);
+            collection.UpdateOne(filter, update);
+        }
+
+        public void DeleteOne<T>(string collectionName, FilterDefinition<T> filter)
+        {
+            var collection = Database.GetCollection<T>(collectionName);
+            collection.DeleteOne(filter);
+        }
     }
 }
