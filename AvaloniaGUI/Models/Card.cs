@@ -5,7 +5,6 @@ using System.Text;
 using System.Threading.Tasks;
 using MongoDB.Bson.Serialization.Attributes;
 using MongoDB.Bson;
-using MongoDB.Driver;
 
 namespace AvaloniaGUI.Models
 {
@@ -22,6 +21,8 @@ namespace AvaloniaGUI.Models
 
         [BsonElement("Cost")]
         public int Cost { get; set; }
+        [BsonElement("Effect")]
+        public string Effect { get; set; }
 
         [BsonElement("Special_icons")]
         public string[] SpecialIcons { get; set; }

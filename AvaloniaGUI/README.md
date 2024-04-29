@@ -20,7 +20,7 @@ If using `VSCode`, the extension requires [.NET 8.0 core](https://marketplace.vi
 
 [x] Cancel button functionality. Instead of closing the page, it will just clear text fields.
 
-[] Connect to MongoDB (Need to convert to a web service at a later date).
+[x] Connect to MongoDB (Need to convert to a web service at a later date).
 
 [] Read, Add, Edit, Delete (in this order).
 
