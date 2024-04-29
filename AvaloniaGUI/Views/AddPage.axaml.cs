@@ -2,6 +2,7 @@ using Avalonia;
 using Avalonia.Controls;
 using Avalonia.Markup.Xaml;
 using Avalonia.VisualTree;
+using AvaloniaGUI.Models;
 
 namespace AvaloniaGUI;
 
@@ -19,7 +20,7 @@ public partial class AddPage : Window
 
     private void AddPageClearTextBoxes_Click(object sender, Avalonia.Interactivity.RoutedEventArgs e)
     {
-        // Event handler for the button click
+        // Event handler for the clear button
         ClearTextBoxes(this);
     }
 
@@ -37,5 +38,23 @@ public partial class AddPage : Window
                 ClearTextBoxes(nestedVisual);
             }
         }
+    }
+
+    private void AddCardButton_Click(object sender, Avalonia.Interactivity.RoutedEventArgs e)
+    {
+        // Event handler for the add button
+        var document = new Card
+        {
+            Name = CardNameTxtBox.Text,
+            Type = CardTypeTxtBox.Text,
+            Cost = int.Parse(CardCostTxtBox.Text),
+            Effect = CardEffectTxtBox.Text,
+            SpecialIcons = CardSpecialIconsTxtBox.Text.Split(","),
+            Elements = CardElementsTxtBox.Text.Split(","),
+            Code = CardCodeTxtBox.Text,
+            Copies = int.Parse(CardCopiesTxtBox.Text),
+            IsFoil = CardFoilCheckBox.IsChecked ?? false,
+            FoilCopies = int.Parse(CardFoilCopiesTxtBox.Text)
+        };
     }
 }

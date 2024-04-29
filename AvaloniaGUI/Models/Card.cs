@@ -5,7 +5,6 @@ using System.Text;
 using System.Threading.Tasks;
 using MongoDB.Bson.Serialization.Attributes;
 using MongoDB.Bson;
-using MongoDB.Driver;
 
 namespace AvaloniaGUI.Models
 {
@@ -15,30 +14,32 @@ namespace AvaloniaGUI.Models
         public ObjectId Id { get; set; }
 
         [BsonElement("Card_name")]
-        public string Name { get; private set; }
+        public string Name { get; set; }
 
         [BsonElement("Type")]
-        public string Type { get; private set; }
+        public string Type { get; set; }
 
         [BsonElement("Cost")]
-        public int Cost { get; private set; }
+        public int Cost { get; set; }
+        [BsonElement("Effect")]
+        public string Effect { get; set; }
 
         [BsonElement("Special_icons")]
-        public string[] SpecialIcons { get; private set; }
+        public string[] SpecialIcons { get; set; }
 
         [BsonElement("Elements")]
-        public string[] Elements { get; private set; }
+        public string[] Elements { get; set; }
 
         [BsonElement("Card_code")]
-        public string Code { get; private set; }
+        public string Code { get; set; }
 
         [BsonElement("Copies")]
-        public int Copies { get; private set; }
+        public int Copies { get; set; }
 
         [BsonElement("Foil?")]
-        public bool IsFoil { get; private set; }
+        public bool IsFoil { get; set; }
 
         [BsonElement("Foil_copies")]
-        public int FoilCopies { get; private set; }
+        public int FoilCopies { get; set; }
     }
 }
