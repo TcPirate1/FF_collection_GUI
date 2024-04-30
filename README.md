@@ -8,6 +8,7 @@ GUI for the [FFcollection](https://github.com/TcPirate1/FFTCG_collection).
 
 - Add page doesn't need a rarity field. This can be obtained from the card code.
 - [Vscode project management](https://code.visualstudio.com/docs/csharp/project-management) and [Creating new C# files](https://stackoverflow.com/questions/44978105/vs-code-right-click-menu-new-class-c-sharp)
+- [Data validation](https://docs.avaloniaui.net/docs/guides/development-guides/data-validation)
 
 ## Build
 
@@ -25,6 +26,7 @@ If using `VSCode`, the extension requires [.NET 8.0 core](https://marketplace.vi
 
 - [x] Connect to MongoDB (Need to convert to a web service at a later date).
 
+- [ ] Data validation
 - [ ] Add
 - [ ] Search
 - [ ] Update
