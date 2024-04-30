@@ -2,9 +2,11 @@
 
 GUI for the [FFcollection](https://github.com/TcPirate1/FFTCG_collection).
 
-Margin/Padding (left, top, right, bottom).
+- Margin/Padding (left, top, right, bottom).
 
-Designing and modifying UI. [Alignment, Padding & Margins](https://docs.avaloniaui.net/docs/basics/user-interface/building-layouts/alignment-margins-and-padding) and [Panel Overview](https://docs.avaloniaui.net/docs/basics/user-interface/building-layouts/panels-overview)
+- Designing and modifying UI. [Alignment, Padding & Margins](https://docs.avaloniaui.net/docs/basics/user-interface/building-layouts/alignment-margins-and-padding) and [Panel Overview](https://docs.avaloniaui.net/docs/basics/user-interface/building-layouts/panels-overview)
+
+- Add page doesn't need a rarity field. This can be obtained from the card code.
 
 ## Build
 
@@ -22,7 +24,10 @@ If using `VSCode`, the extension requires [.NET 8.0 core](https://marketplace.vi
 
 - [x] Connect to MongoDB (Need to convert to a web service at a later date).
 
-- [ ] Read, Add, Edit, Delete (in this order).
+- [ ] Add
+- [ ] Search
+- [ ] Update
+- [ ] Delete
 
 ## Pages
 
