@@ -7,6 +7,7 @@ GUI for the [FFcollection](https://github.com/TcPirate1/FFTCG_collection).
 - Designing and modifying UI. [Alignment, Padding & Margins](https://docs.avaloniaui.net/docs/basics/user-interface/building-layouts/alignment-margins-and-padding) and [Panel Overview](https://docs.avaloniaui.net/docs/basics/user-interface/building-layouts/panels-overview)
 
 - Add page doesn't need a rarity field. This can be obtained from the card code.
+- [Vscode project management](https://code.visualstudio.com/docs/csharp/project-management) and [Creating new C# files](https://stackoverflow.com/questions/44978105/vs-code-right-click-menu-new-class-c-sharp)
 
 ## Build
 
