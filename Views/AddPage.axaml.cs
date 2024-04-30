@@ -45,13 +45,13 @@ public partial class AddPage : Window
         // Event handler for the add button
         var document = new Card
         {
+            Code = CardCodeTxtBox.Text,
             Name = CardNameTxtBox.Text,
             Type = CardTypeTxtBox.Text,
-            Cost = int.Parse(CardCostTxtBox.Text),
+            Elements = CardElementsTxtBox.Text.Split(","),
             Effect = CardEffectTxtBox.Text,
             SpecialIcons = CardSpecialIconsTxtBox.Text.Split(","),
-            Elements = CardElementsTxtBox.Text.Split(","),
-            Code = CardCodeTxtBox.Text,
+            Cost = int.Parse(CardCostTxtBox.Text),
             Copies = int.Parse(CardCopiesTxtBox.Text),
             IsFoil = CardFoilCheckBox.IsChecked ?? false,
             FoilCopies = int.Parse(CardFoilCopiesTxtBox.Text)
