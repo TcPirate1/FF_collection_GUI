@@ -1,15 +1,41 @@
 ﻿using MongoDB.Bson.Serialization.Attributes;
 using MongoDB.Bson;
+using ReactiveUI;
+using System;
+using System.Text.RegularExpressions;
 
 namespace AvaloniaGUI.Models
 {
-    public class Card
+    public class Card : ReactiveObject
     {
+        private readonly string codeRegex = @"^\d{1,2}-\d{3}[CRHLS]+$";
         [BsonId]
         public ObjectId Id { get; set; }
 
         [BsonElement("Card_code")]
-        public string Code { get; set; }
+        private string? _Code;
+        public string Code
+        {
+            get
+            {
+                return _Code;
+            }
+            set
+            {
+                if (!String.IsNullOrEmpty(value))
+                {
+                    this.RaiseAndSetIfChanged(ref _Code, value);
+                }
+                else if (!Regex.IsMatch(value, codeRegex))
+                {
+                    throw new FormatException("Invalid card code format");
+                }
+                else
+                {
+                    throw new ArgumentNullException(nameof(Code), "Card code cannot be empty");
+                }
+            }
+        }
 
         [BsonElement("Card_name")]
         public string Name { get; set; }

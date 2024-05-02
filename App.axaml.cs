@@ -20,7 +20,8 @@ namespace AvaloniaGUI
         {
             if (ApplicationLifetime is IClassicDesktopStyleApplicationLifetime desktop)
             {
-                Env.Load();
+                Env.TraversePath().Load();
+                // If it can't be found in current path it will look in the parent directories
                 var connectionstring = Env.GetString("ATLAS_URI");
                 var databasename = "FFCollection";
                 Mongodbcontext = new MongoDBContext(connectionstring, databasename);

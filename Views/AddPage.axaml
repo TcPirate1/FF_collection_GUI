@@ -60,7 +60,7 @@
 	  </ScrollViewer>
 	  </Border>
 			<StackPanel Orientation="Horizontal">
-				<Button Margin="30,30,0,30" Padding="29,5" FontSize="30">Add</Button>
+				<Button x:Name="AddCardButton" Click="AddCardButton_Click" Margin="30,30,0,30" Padding="29,5" FontSize="30">Add</Button>
 				<Button x:Name="AddPageClearTextBoxes" Click="AddPageClearTextBoxes_Click" Margin="30,30,0,30" Padding="29,5" FontSize="30">Clear All</Button>
 			</StackPanel>
 	</StackPanel>

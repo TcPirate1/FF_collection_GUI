@@ -1,8 +1,12 @@
+using Amazon.Auth.AccessControlPolicy;
 using Avalonia;
 using Avalonia.Controls;
+using Avalonia.Controls.Shapes;
+using Avalonia.Interactivity;
 using Avalonia.Markup.Xaml;
 using Avalonia.VisualTree;
 using AvaloniaGUI.Models;
+using Tmds.DBus.Protocol;
 
 namespace AvaloniaGUI;
 
@@ -56,7 +60,14 @@ public partial class AddPage : Window
             IsFoil = CardFoilCheckBox.IsChecked ?? false,
             FoilCopies = int.Parse(CardFoilCopiesTxtBox.Text)
         };
-        var collection = App.Mongodbcontext?.Database.GetCollection<Card>("Cards");
+  //      System.NullReferenceException
+  //      HResult = 0x80004003
+  //Message = Object reference not set to an instance of an object.
+  //Source = AvaloniaGUI
+  //StackTrace:
+  //      at AvaloniaGUI.AddPage.AddCardButton_Click(Object sender, RoutedEventArgs e) in C: \Users\TC\source\repos\TcPirate1\FF_collection_GUI\Views\AddPage.axaml.cs:line 46
+
+        var collection = App.Mongodbcontext?.Database.GetCollection<Card>("cards");
         collection?.InsertOne(document);
     }
 }
