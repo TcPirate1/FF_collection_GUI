@@ -56,5 +56,7 @@ public partial class AddPage : Window
             IsFoil = CardFoilCheckBox.IsChecked ?? false,
             FoilCopies = int.Parse(CardFoilCopiesTxtBox.Text)
         };
+        var collection = App.Mongodbcontext?.Database.GetCollection<Card>("Cards");
+        collection?.InsertOne(document);
     }
 }
