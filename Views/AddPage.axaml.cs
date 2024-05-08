@@ -1,12 +1,9 @@
-using Amazon.Auth.AccessControlPolicy;
 using Avalonia;
 using Avalonia.Controls;
-using Avalonia.Controls.Shapes;
 using Avalonia.Interactivity;
 using Avalonia.Markup.Xaml;
 using Avalonia.VisualTree;
 using AvaloniaGUI.Models;
-using Tmds.DBus.Protocol;
 
 namespace AvaloniaGUI;
 
@@ -22,7 +19,7 @@ public partial class AddPage : Window
         AvaloniaXamlLoader.Load(this);
     }
 
-    private void AddPageClearTextBoxes_Click(object sender, Avalonia.Interactivity.RoutedEventArgs e)
+    private void AddPageClearTextBoxes_Click(object sender, RoutedEventArgs e)
     {
         // Event handler for the clear button
         ClearTextBoxes(this);
@@ -44,7 +41,7 @@ public partial class AddPage : Window
         }
     }
 
-    private void AddCardButton_Click(object sender, Avalonia.Interactivity.RoutedEventArgs e)
+    private void AddCardButton_Click(object sender, RoutedEventArgs e)
     {
         // Event handler for the add button
         var document = new Card
