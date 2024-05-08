@@ -22,7 +22,7 @@ namespace AvaloniaGUI.Models
             }
             set
             {
-                if (!String.IsNullOrEmpty(value))
+                if (!string.IsNullOrEmpty(value))
                 {
                     this.RaiseAndSetIfChanged(ref _Code, value);
                 }
