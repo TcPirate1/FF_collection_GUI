@@ -18,11 +18,11 @@
 			<StackPanel Orientation="Vertical">
 
 				<!-- Code -->
-				<TextBlock Text="Card Code" FontSize="12" Margin="0,10" HorizontalAlignment="Center"/>
+				<TextBlock Text="{Binding Card.Code}" FontSize="12" Margin="0,10" HorizontalAlignment="Center"/>
 				<TextBox x:Name="CardCodeTxtBox" Margin="0,0,0,10" Width="200"/>
 
 				<!-- Name -->
-				<TextBlock Text="Card Name" FontSize="12" Margin="0,10" HorizontalAlignment="Center"/>
+				<TextBlock Text="{Binding Card.Name}" FontSize="12" Margin="0,10" HorizontalAlignment="Center"/>
 				<TextBox x:Name="CardNameTxtBox" Margin="0,0,0,10" Width="200"/>
 
 				<!-- Type -->
