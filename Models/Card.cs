@@ -8,7 +8,6 @@ namespace AvaloniaGUI.Models
 {
     public class Card : ReactiveObject
     {
-        private readonly string codeRegex = @"^\d{1,2}-\d{3}[CRHLS]+$";
         [BsonId]
         public ObjectId Id { get; set; }
 
