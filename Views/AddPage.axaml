@@ -30,7 +30,7 @@
 				<TextBox x:Name="CardTypeTxtBox" Margin="0,0,0,10" Width="200"/>
 
 				<!-- Elements -->
-				<TextBlock Text="{Binding Card.Elemment}" FontSize="12" Margin="0,10" HorizontalAlignment="Center"/>
+				<TextBlock Text="{Binding Card.Elements}" FontSize="12" Margin="0,10" HorizontalAlignment="Center"/>
 				<TextBox x:Name="CardElementsTxtBox" Margin="0,0,0,10" Width="200"/>
 
 				<!-- Effect -->
