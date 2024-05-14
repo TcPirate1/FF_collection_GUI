@@ -30,4 +30,18 @@ public class Validation
             throw new ArgumentNullException(nameof(name), "This field cannot be empty");
         }
     }
+    public static void ValidateCost(int cost)
+    {
+        if (cost < 1 || cost > 11)
+        {
+            throw new ArgumentException("There are no cards that has a cost lower than 1 and higher than 11.");
+        }
+    }
+    public static void ValidateCopies(int copies)
+    {
+        if (copies < 1)
+        {
+            throw new ArgumentException("Cannot have less than 1 copy.");
+        }
+    }
 }
