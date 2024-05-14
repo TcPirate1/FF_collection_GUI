@@ -16,30 +16,30 @@ namespace AvaloniaGUI.Models
         public string? Code;
 
         [BsonElement("Card_name")]
-        public string Name { get; set; }
+        public string? Name { get; set; }
 
         [BsonElement("Type")]
-        public string Type { get; set; }
+        public string? Type { get; set; }
 
         [BsonElement("Elements")]
-        public string[] Elements { get; set; }
+        public string[]? Elements { get; set; }
         
         [BsonElement("Effect")]
-        public string Effect { get; set; }
+        public string? Effect { get; set; }
 
         [BsonElement("Special_icons")]
-        public string[] SpecialIcons { get; set; }
+        public string[]? SpecialIcons { get; set; }
 
         [BsonElement("Cost")]
-        public int Cost { get; set; }
+        public int? Cost { get; set; }
 
         [BsonElement("Copies")]
-        public int Copies { get; set; }
+        public int? Copies { get; set; }
 
         [BsonElement("Foil?")]
-        public bool IsFoil { get; set; }
+        public bool? IsFoil { get; set; }
 
         [BsonElement("Foil_copies")]
-        public int FoilCopies { get; set; }
+        public int? FoilCopies { get; set; }
     }
 }
