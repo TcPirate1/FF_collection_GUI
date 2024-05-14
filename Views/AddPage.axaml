@@ -18,23 +18,23 @@
 			<StackPanel Orientation="Vertical">
 
 				<!-- Code -->
-				<TextBlock Text="{Binding Card.Code}" FontSize="12" Margin="0,10" HorizontalAlignment="Center"/>
+				<TextBlock Text="Code" FontSize="12" Margin="0,10" HorizontalAlignment="Center"/>
 				<TextBox x:Name="CardCodeTxtBox" Margin="0,0,0,10" Width="200"/>
 
 				<!-- Name -->
-				<TextBlock Text="{Binding Card.Name}" FontSize="12" Margin="0,10" HorizontalAlignment="Center"/>
+				<TextBlock Text="Name" FontSize="12" Margin="0,10" HorizontalAlignment="Center"/>
 				<TextBox x:Name="CardNameTxtBox" Margin="0,0,0,10" Width="200"/>
 
 				<!-- Type -->
-				<TextBlock Text="{Binding Card.Type}" FontSize="12" Margin="0,10" HorizontalAlignment="Center"/>
+				<TextBlock Text="Type" FontSize="12" Margin="0,10" HorizontalAlignment="Center"/>
 				<TextBox x:Name="CardTypeTxtBox" Margin="0,0,0,10" Width="200"/>
 
 				<!-- Elements -->
-				<TextBlock Text="{Binding Card.Elements}" FontSize="12" Margin="0,10" HorizontalAlignment="Center"/>
+				<TextBlock Text="Elements" FontSize="12" Margin="0,10" HorizontalAlignment="Center"/>
 				<TextBox x:Name="CardElementsTxtBox" Margin="0,0,0,10" Width="200"/>
 
 				<!-- Effect -->
-				<TextBlock Text="Card Effect" FontSize="12" Margin="0,10" HorizontalAlignment="Center"/>
+				<TextBlock Text="Effect" FontSize="12" Margin="0,10" HorizontalAlignment="Center"/>
 				<TextBox x:Name="CardEffectTxtBox" Margin="0,0,0,10" Width="200"/>
 
 				<!-- Special Icons -->
@@ -42,15 +42,15 @@
 				<TextBox x:Name="CardSpecialIconsTxtBox" Margin="0,0,0,10" Width="200"/>
 
 				<!-- Cost -->
-				<TextBlock Text="Card Cost" FontSize="12" Margin="0,10" HorizontalAlignment="Center"/>
+				<TextBlock Text="Cost" FontSize="12" Margin="0,10" HorizontalAlignment="Center"/>
 				<TextBox x:Name="CardCostTxtBox" Margin="0,0,0,10" Width="200"/>
 
 				<!-- Quantity -->
-				<TextBlock Text="Card Quantity" FontSize="12" Margin="0,10" HorizontalAlignment="Center"/>
+				<TextBlock Text="Quantity" FontSize="12" Margin="0,10" HorizontalAlignment="Center"/>
 				<TextBox x:Name="CardCopiesTxtBox" Margin="0,0,0,10" Width="200"/>
 
 				<!-- Foil -->
-				<CheckBox x:Name="CardFoilCheckBox">Is Foil</CheckBox>
+				<CheckBox x:Name="CardFoilCheckBox" Margin="0,10" HorizontalAlignment="Center">Is Foil</CheckBox>
 
 				<!-- Foil copies -->
 				<TextBlock Text="Foil Copies" FontSize="12" Margin="0,10" HorizontalAlignment="Center"/>

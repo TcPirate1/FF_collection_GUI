@@ -13,29 +13,7 @@ namespace AvaloniaGUI.Models
         public ObjectId Id { get; set; }
 
         [BsonElement("Card_code")]
-        private string? _Code;
-        public string Code
-        {
-            get
-            {
-                return _Code;
-            }
-            set
-            {
-                if (!string.IsNullOrEmpty(value))
-                {
-                    this.RaiseAndSetIfChanged(ref _Code, value);
-                }
-                else if (!Regex.IsMatch(value, codeRegex))
-                {
-                    throw new FormatException("Invalid card code format");
-                }
-                else
-                {
-                    throw new ArgumentNullException(nameof(Code), "Card code cannot be empty");
-                }
-            }
-        }
+        public string? Code;
 
         [BsonElement("Card_name")]
         public string Name { get; set; }
