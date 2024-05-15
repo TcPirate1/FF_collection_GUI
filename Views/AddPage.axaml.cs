@@ -1,3 +1,4 @@
+using System;
 using Avalonia;
 using Avalonia.Controls;
 using Avalonia.Interactivity;
@@ -44,27 +45,15 @@ public partial class AddPage : Window
     private void AddCardButton_Click(object sender, RoutedEventArgs e)
     {
         // Event handler for the add button
-        var document = new Card
+        try
         {
-            Code = CardCodeTxtBox.Text,
-            Name = CardNameTxtBox.Text,
-            Type = CardTypeTxtBox.Text,
-            Elements = CardElementsTxtBox.Text.Split(","),
-            Effect = CardEffectTxtBox.Text,
-            SpecialIcons = CardSpecialIconsTxtBox.Text.Split(","),
-            Cost = int.Parse(CardCostTxtBox.Text),
-            Copies = int.Parse(CardCopiesTxtBox.Text),
-            IsFoil = CardFoilCheckBox.IsChecked ?? false,
-            FoilCopies = int.Parse(CardFoilCopiesTxtBox.Text)
-        };
-  //      System.NullReferenceException
-  //      HResult = 0x80004003
-  //Message = Object reference not set to an instance of an object.
-  //Source = AvaloniaGUI
-  //StackTrace:
-  //      at AvaloniaGUI.AddPage.AddCardButton_Click(Object sender, RoutedEventArgs e) in C: \Users\TC\source\repos\TcPirate1\FF_collection_GUI\Views\AddPage.axaml.cs:line 46
-
-        var collection = App.Mongodbcontext?.Database.GetCollection<Card>("cards");
-        collection?.InsertOne(document);
+            string code = CardCodeTxtBox.Text;
+            string name = CardNameTxtBox.Text;
+            int cost = int.Parse(CardCostTxtBox.Text);
+        }
+        catch (Exception ex)
+        {
+            MessageBox.Show(ex.Message);
+        }
     }
 }

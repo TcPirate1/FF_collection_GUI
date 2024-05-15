@@ -1,8 +1,7 @@
-﻿using DynamicData;
-using System;
+﻿using System;
 using System.Text.RegularExpressions;
 
-namespace AvaloniaGUI;
+namespace AvaloniaGUI.Utils;
 
 public class Validation
 {
@@ -28,6 +27,13 @@ public class Validation
         if (Regex.IsMatch(name, codeRegex) || (Regex.IsMatch(name, promoRegex)))
         {
             throw new ArgumentNullException(nameof(name), "This field cannot be empty");
+        }
+    }
+    public static void ValidateType(string type)
+    {
+        if (type != "Monster" || type != "Forward" || type != "Backup" || type != "Summon")
+        {
+            throw new ArgumentException("Invalid type. Must be Monster, Forward, Backup or Summon.");
         }
     }
     public static void ValidateCost(int cost)

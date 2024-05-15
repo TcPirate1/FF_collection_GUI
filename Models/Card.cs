@@ -3,22 +3,59 @@ using MongoDB.Bson;
 using ReactiveUI;
 using System;
 using System.Text.RegularExpressions;
+using AvaloniaGUI.Utils;
 
 namespace AvaloniaGUI.Models
 {
     public class Card : ReactiveObject
     {
+        private string _validationErrorMsg;
+        public string ValidationErrorMsg
+        {
+            get => _validationErrorMsg;
+            set => this.RaiseAndSetIfChanged(ref _validationErrorMsg, value);
+        }
         [BsonId]
         public ObjectId Id { get; set; }
 
         [BsonElement("Card_code")]
-        public string? Code;
+        private string? _code;
+        public string? Code
+        {
+            get => _code;
+            set
+            {
+                Validation.EmptyTextFields(value);
+                Validation.ValidateCode(value);
+                this.RaiseAndSetIfChanged(ref _code, value);
+            }
+        }
 
         [BsonElement("Card_name")]
-        public string? Name { get; set; }
+        private string? _name;
+        public string? Name
+        {
+            get => _name;
+            set
+            {
+                Validation.EmptyTextFields(value);
+                Validation.ValidateName(value);
+                this.RaiseAndSetIfChanged(ref _name, value);
+            }
+        }
 
         [BsonElement("Type")]
-        public string? Type { get; set; }
+        private string? _type;
+        public string? Type
+        {
+            get => _type;
+            set
+            {
+                Validation.EmptyTextFields(value);
+                Validation.ValidateType(value);
+                this.RaiseAndSetIfChanged(ref _type, value);
+            }
+        }
 
         [BsonElement("Elements")]
         public string[]? Elements { get; set; }
@@ -30,10 +67,28 @@ namespace AvaloniaGUI.Models
         public string[]? SpecialIcons { get; set; }
 
         [BsonElement("Cost")]
-        public int? Cost { get; set; }
+        private int? _cost;
+        public int? Cost
+        {
+            get => _cost;
+            set
+            {
+                Validation.ValidateCost(value.Value);
+                this.RaiseAndSetIfChanged(ref _cost, value);
+            }
+        }
 
         [BsonElement("Copies")]
-        public int? Copies { get; set; }
+        private int? _copies;
+        public int? Copies
+        {
+            get => _copies;
+            set
+            {
+                Validation.ValidateCopies(value.Value);
+                this.RaiseAndSetIfChanged(ref _copies, value);
+            }
+        }
 
         [BsonElement("Foil?")]
         public bool? IsFoil { get; set; }
