@@ -9,12 +9,6 @@ namespace AvaloniaGUI.Models
 {
     public class Card : ReactiveObject
     {
-        private string _validationErrorMsg;
-        public string ValidationErrorMsg
-        {
-            get => _validationErrorMsg;
-            set => this.RaiseAndSetIfChanged(ref _validationErrorMsg, value);
-        }
         [BsonId]
         public ObjectId Id { get; set; }
 

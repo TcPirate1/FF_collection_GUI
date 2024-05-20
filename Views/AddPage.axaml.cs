@@ -41,19 +41,4 @@ public partial class AddPage : Window
             }
         }
     }
-
-    private void AddCardButton_Click(object sender, RoutedEventArgs e)
-    {
-        // Event handler for the add button
-        try
-        {
-            string code = CardCodeTxtBox.Text;
-            string name = CardNameTxtBox.Text;
-            int cost = int.Parse(CardCostTxtBox.Text);
-        }
-        catch (Exception ex)
-        {
-            MessageBox.Show(ex.Message);
-        }
-    }
 }
