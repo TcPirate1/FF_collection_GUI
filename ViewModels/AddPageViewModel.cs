@@ -11,8 +11,16 @@ namespace AvaloniaGUI.ViewModels
 {
     public class AddPageViewModel : ReactiveObject
     {
-        // Create instance of the Card class in here. Use RaiseAndSetIfChanged to detect change and bind to the views.
         private Card _card;
+        private string _validationErrorMsg;
+        public ReactiveCommand<Unit, Unit> AddCardCommand { get; }
+
+        public AddPageViewModel()
+        {
+            Card = new Card();
+            AddCardCommand = ReactiveCommand.Create(AddCard);
+            ValidationErrorMsg = string.Empty;
+        }
 
         public Card Card
         {
@@ -20,9 +28,37 @@ namespace AvaloniaGUI.ViewModels
             set => this.RaiseAndSetIfChanged(ref _card, value);
         }
 
-        public AddPageViewModel()
+        public string ValidationErrorMsg
         {
-            Card = new Card();
+            get => _validationErrorMsg;
+            set => this.RaiseAndSetIfChanged(ref _validationErrorMsg, value);
+        }
+
+        public void AddCard()
+        {
+            try
+            {
+                // Add the card to the database
+                // Clear the textboxes
+                ValidationErrorMsg = string.Empty;
+            }
+            catch (Exception ex)
+            {
+                ValidationErrorMsg = ex.Message;
+            }
+        }
+
+        public void ValidateCard()
+        {
+            try
+            {
+                // Validate the card
+                ValidationErrorMsg = string.Empty;
+            }
+            catch (Exception ex)
+            {
+                ValidationErrorMsg = ex.Message;
+            }
         }
     }
 }
